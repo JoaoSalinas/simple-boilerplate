@@ -8,16 +8,11 @@
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
     "prepare": "husky install",
-    "test": "jest",
-    "test:watch": "yarn test --watch",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public",
     "generate": "yarn plop --plopfile ./generators/plopfile.js"
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+      "yarn lint --fix"
     ]
   },
   "dependencies": {
@@ -30,11 +25,6 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-typescript": "^7.15.0",
-    "@storybook/addon-essentials": "^6.3.8",
-    "@storybook/react": "^6.3.8",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@types/jest": "^27.0.1",
     "@types/react": "^17.0.20",
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
@@ -48,8 +38,6 @@
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.0",
-    "jest": "^27.1.1",
-    "jest-styled-components": "^7.0.5",
     "lint-staged": "^11.1.2",
     "plop": "^2.7.4",
     "prettier": "2.4.0",
